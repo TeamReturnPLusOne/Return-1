@@ -4,15 +4,15 @@
 # Return-1
 LabConnector Frontend
 
-Labconnector is a makerspace management web application frontend built using Stitch for component driven UI development and AntiGravity for state management and interaction handling. The application provides structured interfaces for machine booking resource management and real time activity visualization.
+LabConnector is a makerspace management web application frontend built using Stitch for component driven UI development and AntiGravity for state management and interaction handling. The application provides structured interfaces for machine booking resource management and real time activity visualization.
 
 Get Started
 
 Clone the repository and install dependencies required for running the Stitch based frontend and AntiGravity state system
 
-git clone https://github.com/your-username/fabcommons-frontend.git
+git clone https://github.com/your-username/LabConnector-frontend.git
 
-cd fabcommons-frontend
+cd LabConnector-frontend
 npm install
 
 Ensure that your environment supports modern JavaScript tooling and package management
