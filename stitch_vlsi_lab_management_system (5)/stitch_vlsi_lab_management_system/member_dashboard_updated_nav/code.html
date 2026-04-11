@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VLSI_LAB_CORE | Member Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#4cf9af",
+                    "background": "#0c0e0f",
+                    "surface-container": "#171a1b",
+                    "outline": "#747577",
+                    "tertiary-dim": "#7e51ff",
+                    "on-tertiary-fixed-variant": "#4000ad",
+                    "on-tertiary-fixed": "#1c0055",
+                    "primary-dim": "#00d4ec",
+                    "primary-fixed": "#00e3fd",
+                    "primary-fixed-dim": "#00d4ec",
+                    "surface-dim": "#0c0e0f",
+                    "on-tertiary": "#25006b",
+                    "secondary-dim": "#36eaa1",
+                    "primary-container": "#00e3fd",
+                    "on-primary": "#005762",
+                    "error": "#ff716c",
+                    "on-primary-fixed-variant": "#005762",
+                    "tertiary": "#a68cff",
+                    "tertiary-fixed-dim": "#ab93ff",
+                    "error-container": "#9f0519",
+                    "on-secondary": "#005a3a",
+                    "inverse-on-surface": "#545556",
+                    "tertiary-fixed": "#b8a3ff",
+                    "on-secondary-fixed": "#00452c",
+                    "on-primary-container": "#004d57",
+                    "surface-variant": "#232628",
+                    "on-error": "#490006",
+                    "inverse-primary": "#006976",
+                    "secondary-fixed-dim": "#36eaa1",
+                    "tertiary-container": "#7c4dff",
+                    "outline-variant": "#464849",
+                    "surface-tint": "#81ecff",
+                    "on-surface": "#f6f6f7",
+                    "on-secondary-fixed-variant": "#006541",
+                    "inverse-surface": "#f9f9fa",
+                    "surface-container-high": "#1d2021",
+                    "on-surface-variant": "#aaabac",
+                    "primary": "#81ecff",
+                    "on-secondary-container": "#e1ffea",
+                    "surface": "#0c0e0f",
+                    "on-background": "#f6f6f7",
+                    "on-tertiary-container": "#ffffff",
+                    "surface-container-low": "#111415",
+                    "surface-container-lowest": "#000000",
+                    "secondary": "#4cf9af",
+                    "on-error-container": "#ffa8a3",
+                    "error-dim": "#d7383b",
+                    "secondary-container": "#006c47",
+                    "surface-container-highest": "#232628",
+                    "surface-bright": "#292d2e",
+                    "on-primary-fixed": "#003840"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": [
+                            "Space Grotesk"
+                    ],
+                    "body": [
+                            "Manrope"
+                    ],
+                    "label": [
+                            "Space Grotesk"
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #0c0e0f;
+            color: #f6f6f7;
+        }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .grid-overlay {
+            background-image: 
+                linear-gradient(rgba(129, 236, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(129, 236, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glass-panel {
+            background: rgba(23, 26, 27, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="flex min-h-screen overflow-x-hidden">
+<!-- SIDEBAR NAVIGATION - Updated based on COMPONENTS_34 -->
+<aside class="hidden md:flex flex-col h-screen w-72 sticky left-0 top-0 bg-[#111415] border-none py-8 shadow-[24px_0_48px_-12px_rgba(0,227,253,0.05)] shrink-0 z-50" href="../systems_in_use/code.html">
+<div class="px-6 mb-10">
+<h1 class="text-xl font-bold text-[#81ecff] font-headline tracking-widest uppercase">VLSI_LAB_CORE</h1>
+<p class="text-[10px] font-headline uppercase tracking-widest text-[#81ecff] opacity-60">Precision Terminal</p>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Active: Dashboard -->
+<a class="flex items-center gap-4 px-6 py-4 text-[#4cf9af] bg-[#171a1b] relative before:absolute before:left-0 before:h-2/3 before:w-1 before:bg-[#4cf9af] before:rounded-r-sm transition-transform duration-150 active:scale-[0.98]" href="../member_dashboard_updated_nav/code.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-headline uppercase text-xs tracking-tighter font-bold">Dashboard</span>
+</a>
+<!-- Equipment -->
+<a class="flex items-center gap-4 px-6 py-4 text-[#f6f6f7]/60 hover:text-[#f6f6f7] hover:bg-[#1d2021] transition-all duration-200 ease-out active:scale-[0.98]" href="../systems_in_use/code.html">
+<span class="material-symbols-outlined" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="font-headline uppercase text-xs tracking-tighter">Equipment</span>
+</a>
+<!-- Bookings -->
+<a class="flex items-center gap-4 px-6 py-4 text-[#f6f6f7]/60 hover:text-[#f6f6f7] hover:bg-[#1d2021] transition-all duration-200 ease-out active:scale-[0.98]" href="../member_booking_schedule_updated_nav/code.html">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-headline uppercase text-xs tracking-tighter">Bookings</span>
+</a>
+<!-- Systems In Use -->
+<a class="flex items-center gap-4 px-6 py-4 text-[#f6f6f7]/60 hover:text-[#f6f6f7] hover:bg-[#1d2021] transition-all duration-200 ease-out active:scale-[0.98]" href="../systems_in_use/code.html">
+<span class="material-symbols-outlined" data-icon="developer_board">developer_board</span>
+<span class="font-headline uppercase text-xs tracking-tighter">Systems In Use</span>
+</a>
+</nav>
+<div class="px-6 mt-6">
+<button class="w-full py-3 bg-[#81ecff] text-[#005762] font-headline font-bold text-xs uppercase tracking-widest rounded-DEFAULT hover:bg-[#00e3fd] transition-colors active:scale-95">
+                New Booking
+            </button>
+</div>
+<div class="mt-auto px-6 space-y-1">
+<a class="flex items-center py-2 gap-4 text-[#f6f6f7]/60 hover:text-[#81ecff] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span class="font-headline uppercase text-xs tracking-tighter">Support</span>
+</a>
+<a class="flex items-center py-2 gap-4 text-[#f6f6f7]/60 hover:text-[#81ecff] transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-headline uppercase text-xs tracking-tighter">Settings</span>
+</a>
+</div>
+</aside>
+<!-- MAIN CONTENT AREA -->
+<main class="flex-1 bg-background relative min-w-0">
+<!-- Grid Background Overlay -->
+<div class="absolute inset-0 grid-overlay pointer-events-none opacity-40"></div>
+<!-- TOP BAR -->
+<header class="w-full top-0 sticky z-30 bg-[#111415] shadow-[0_24px_48px_-12px_rgba(0,227,253,0.08)] flex justify-between items-center px-8 py-4">
+<div class="flex items-center space-x-4">
+<span class="md:hidden font-headline font-bold text-[#81ecff]">VLSI_LAB_CORE</span>
+<div class="hidden lg:flex items-center bg-surface-container-high px-4 py-2 rounded-DEFAULT">
+<span class="material-symbols-outlined text-outline text-sm" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-on-surface w-64 placeholder:text-outline/50 font-body" placeholder="Search instrumentation..." type="text"/>
+</div>
+</div>
+<div class="flex items-center space-x-6">
+<!-- Safety Status Indicator -->
+<div class="flex items-center bg-secondary-container/20 px-3 py-1.5 rounded-DEFAULT border-l-2 border-secondary">
+<span class="material-symbols-outlined text-secondary text-[16px] mr-2" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-headline text-[10px] uppercase tracking-widest text-secondary font-bold">Safety Status: Nominal</span>
+</div>
+<div class="flex items-center space-x-3">
+<button class="material-symbols-outlined text-primary hover:text-secondary transition-colors" data-icon="settings">settings</button>
+<button class="material-symbols-outlined text-primary hover:text-secondary transition-colors" data-icon="account_circle">account_circle</button>
+</div>
+</div>
+</header>
+<!-- DASHBOARD CONTENT -->
+<div class="relative z-10 p-8 max-w-7xl mx-auto space-y-8">
+<!-- Hero Header -->
+<section class="space-y-2">
+<h2 class="text-4xl md:text-5xl font-headline font-bold tracking-tight text-on-surface">Member <span class="text-primary">Dashboard</span></h2>
+<p class="text-on-surface-variant font-body max-w-2xl">Access real-time laboratory telemetry, manage your scheduled CMOS fabrication sequences, and monitor ongoing experiment logs.</p>
+</section>
+<!-- BENTO GRID LAYOUT -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- 1. Laboratory Overview (Real-time Stats) -->
+<div class="md:col-span-8 bg-surface-container-low p-6 flex flex-col space-y-6">
+<div class="flex justify-between items-end">
+<h3 class="font-headline uppercase text-xs tracking-widest text-primary font-bold">Laboratory Overview</h3>
+<span class="text-[10px] text-outline font-label">LIVE TELEMETRY ACTIVE</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+<div class="bg-surface-container p-6 border-l-2 border-primary group hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="science">science</span>
+<div class="text-3xl font-headline font-bold text-on-surface">12</div>
+<div class="text-[10px] font-headline uppercase tracking-widest text-outline">Active Experiments</div>
+</div>
+<div class="bg-surface-container p-6 border-l-2 border-secondary group hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-secondary mb-2" data-icon="sensors">sensors</span>
+<div class="text-3xl font-headline font-bold text-on-surface">84%</div>
+<div class="text-[10px] font-headline uppercase tracking-widest text-outline">Lab Occupancy</div>
+</div>
+<div class="bg-surface-container p-6 border-l-2 border-tertiary group hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-tertiary mb-2" data-icon="build_circle">build_circle</span>
+<div class="text-3xl font-headline font-bold text-on-surface">158</div>
+<div class="text-[10px] font-headline uppercase tracking-widest text-outline">Available Tools</div>
+</div>
+</div>
+<!-- Technical Visualization Graphic -->
+<div class="h-48 w-full bg-surface-container-lowest relative overflow-hidden group">
+<div class="absolute inset-0 flex items-center justify-center">
+<img alt="circuit architecture" class="opacity-20 grayscale group-hover:grayscale-0 transition-all duration-700 w-full h-full object-cover" data-alt="extreme close-up of a semiconductor silicon wafer with intricate microscopic circuit patterns under cold blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv05JDYWK2HjFC-oWRc1GynoSifS2PSl3I9DoASoaZNd5gv2he-PxXHMTOm_KscEgKmF5mo8CAILCKc7waySFKfx9z8y68AMr8G8SA3-jV4d3QqeTCOCxdUzT0EKneWT2QeAj-1d8Yz2cX2A2sq1hXsZMM5dXplfhBpHHQhNQGAeerq2hGoxTmzlG9xI5vjRgnfME706qd_K-UkME9aUDgTteSRRUUNzAWoaNLibHwwt1NtM5wepiJiZs6mOSwSidKZc6zdEx3a7o"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+</div>
+<div class="absolute bottom-4 left-4 font-label text-[10px] text-primary bg-background/80 px-2 py-1">THERMAL_SCAN_001.JPG</div>
+</div>
+</div>
+<!-- 2. Your Upcoming Bookings -->
+<div class="md:col-span-4 bg-surface-container p-6 space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="font-headline uppercase text-xs tracking-widest text-primary font-bold">Upcoming Bookings</h3>
+<span class="material-symbols-outlined text-outline text-lg" data-icon="calendar_today">calendar_today</span>
+</div>
+<div class="space-y-4">
+<div class="p-4 bg-surface-container-high relative overflow-hidden group hover:bg-surface-bright transition-all cursor-pointer">
+<div class="absolute right-0 top-0 w-1 h-full bg-secondary"></div>
+<div class="text-xs text-secondary font-headline font-bold mb-1">STARTS IN 45 MIN</div>
+<div class="text-on-surface font-headline font-bold">ASML Lithography X3</div>
+<div class="text-xs text-outline mb-3 font-body">Sub-nanometer Patterning Lab</div>
+<div class="flex items-center text-[10px] text-primary uppercase tracking-widest font-bold">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="schedule">schedule</span> 14:00 - 18:00
+                            </div>
+</div>
+<div class="p-4 bg-surface-container-low opacity-60 hover:opacity-100 transition-all cursor-pointer border-l border-outline-variant/30">
+<div class="text-xs text-outline font-headline font-bold mb-1">TOMORROW</div>
+<div class="text-on-surface font-headline font-bold">Agilent Oscilloscope P9</div>
+<div class="text-xs text-outline mb-3 font-body">Signal Integrity Analysis</div>
+<div class="flex items-center text-[10px] text-outline uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="schedule">schedule</span> 09:30 - 12:00
+                            </div>
+</div>
+</div>
+<button class="w-full py-3 outline outline-1 outline-primary/30 text-primary font-headline font-bold text-[10px] uppercase tracking-widest hover:bg-primary/10 transition-colors">View All Schedules</button>
+</div>
+<!-- 3. Recent Lab Activity (Notifications) -->
+<div class="md:col-span-5 bg-surface-container-low p-6 space-y-6">
+<h3 class="font-headline uppercase text-xs tracking-widest text-primary font-bold">Lab Activity Feed</h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="h-8 w-8 bg-secondary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-body text-on-surface">Fabrication Sequence <span class="text-secondary font-bold">#FB-902</span> completed successfully on Cluster 4.</p>
+<p class="text-[10px] text-outline uppercase tracking-widest font-label">2 mins ago</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="h-8 w-8 bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="info">info</span>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-body text-on-surface">Calibration alert: <span class="text-primary font-bold">Ion Beam Implanter</span> requires routine verification by Friday.</p>
+<p class="text-[10px] text-outline uppercase tracking-widest font-label">1 hour ago</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="h-8 w-8 bg-tertiary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="person">person</span>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-body text-on-surface">Lab Supervisor approved your request for <span class="text-tertiary font-bold">Extended Access</span>.</p>
+<p class="text-[10px] text-outline uppercase tracking-widest font-label">3 hours ago</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Quick Access -->
+<div class="md:col-span-7 bg-surface-container p-6 space-y-6">
+<h3 class="font-headline uppercase text-xs tracking-widest text-primary font-bold">Quick Access Tools</h3>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+<button class="bg-surface-container-high p-4 flex flex-col items-center justify-center group hover:bg-surface-bright transition-all border border-transparent hover:border-primary/20">
+<span class="material-symbols-outlined text-outline group-hover:text-primary mb-3" data-icon="magnification_small" style="font-variation-settings: 'opsz' 48;">magnification_small</span>
+<span class="text-[10px] font-headline uppercase tracking-widest text-on-surface text-center">SEM Visualizer</span>
+</button>
+<button class="bg-surface-container-high p-4 flex flex-col items-center justify-center group hover:bg-surface-bright transition-all border border-transparent hover:border-primary/20">
+<span class="material-symbols-outlined text-outline group-hover:text-primary mb-3" data-icon="terminal" style="font-variation-settings: 'opsz' 48;">terminal</span>
+<span class="text-[10px] font-headline uppercase tracking-widest text-on-surface text-center">Log Viewer</span>
+</button>
+<button class="bg-surface-container-high p-4 flex flex-col items-center justify-center group hover:bg-surface-bright transition-all border border-transparent hover:border-primary/20">
+<span class="material-symbols-outlined text-outline group-hover:text-primary mb-3" data-icon="fingerprint" style="font-variation-settings: 'opsz' 48;">fingerprint</span>
+<span class="text-[10px] font-headline uppercase tracking-widest text-on-surface text-center">Access Gate</span>
+</button>
+<button class="bg-surface-container-high p-4 flex flex-col items-center justify-center group hover:bg-surface-bright transition-all border border-transparent hover:border-primary/20">
+<span class="material-symbols-outlined text-outline group-hover:text-primary mb-3" data-icon="cloud_download" style="font-variation-settings: 'opsz' 48;">cloud_download</span>
+<span class="text-[10px] font-headline uppercase tracking-widest text-on-surface text-center">Export Data</span>
+</button>
+</div>
+<!-- System Status Card -->
+<div class="mt-4 p-4 bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</div>
+<span class="text-[10px] font-headline uppercase tracking-widest text-on-surface">Core Systems Integrated</span>
+</div>
+<div class="text-[10px] text-outline font-label">LATENCY: 4.2ms</div>
+</div>
+</div>
+</div>
+</div>
+<!-- MOBILE NAVIGATION BAR (Suppressed on Web) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-[#111415] flex justify-around items-center py-4 px-6 z-50">
+<a class="flex flex-col items-center text-[#4cf9af]" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] font-headline font-bold uppercase mt-1">Dash</span>
+</a>
+<a class="flex flex-col items-center text-on-surface opacity-60" href="#">
+<span class="material-symbols-outlined" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="text-[10px] font-headline uppercase mt-1">Tools</span>
+</a>
+<a class="flex flex-col items-center text-on-surface opacity-60" href="#">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+<span class="text-[10px] font-headline uppercase mt-1">Book</span>
+</a>
+<a class="flex flex-col items-center text-on-surface opacity-60" href="#">
+<span class="material-symbols-outlined" data-icon="developer_board">developer_board</span>
+<span class="text-[10px] font-headline uppercase mt-1">Systems</span>
+</a>
+</nav>
+</main>
+</body></html>

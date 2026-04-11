@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#006c47",
+                        "on-background": "#f6f6f7",
+                        "inverse-on-surface": "#545556",
+                        "on-secondary": "#005a3a",
+                        "on-primary": "#005762",
+                        "surface-dim": "#0c0e0f",
+                        "inverse-surface": "#f9f9fa",
+                        "outline": "#747577",
+                        "surface-container-lowest": "#000000",
+                        "primary-container": "#00e3fd",
+                        "primary-fixed": "#00e3fd",
+                        "secondary-fixed": "#4cf9af",
+                        "primary-fixed-dim": "#00d4ec",
+                        "inverse-primary": "#006976",
+                        "on-tertiary": "#25006b",
+                        "on-tertiary-container": "#ffffff",
+                        "error-container": "#9f0519",
+                        "on-primary-fixed": "#003840",
+                        "on-secondary-fixed": "#00452c",
+                        "surface-tint": "#81ecff",
+                        "primary": "#81ecff",
+                        "surface-container": "#171a1b",
+                        "on-tertiary-fixed-variant": "#4000ad",
+                        "surface-bright": "#292d2e",
+                        "outline-variant": "#464849",
+                        "on-error": "#490006",
+                        "on-primary-container": "#004d57",
+                        "background": "#0c0e0f",
+                        "secondary-dim": "#36eaa1",
+                        "surface-container-high": "#1d2021",
+                        "tertiary-dim": "#7e51ff",
+                        "surface-container-low": "#111415",
+                        "tertiary": "#a68cff",
+                        "surface-variant": "#232628",
+                        "on-secondary-container": "#e1ffea",
+                        "error": "#ff716c",
+                        "tertiary-fixed": "#b8a3ff",
+                        "surface": "#0c0e0f",
+                        "on-surface-variant": "#aaabac",
+                        "error-dim": "#d7383b",
+                        "surface-container-highest": "#232628",
+                        "on-error-container": "#ffa8a3",
+                        "on-secondary-fixed-variant": "#006541",
+                        "tertiary-fixed-dim": "#ab93ff",
+                        "secondary-fixed-dim": "#36eaa1",
+                        "on-tertiary-fixed": "#1c0055",
+                        "primary-dim": "#00d4ec",
+                        "tertiary-container": "#7c4dff",
+                        "secondary": "#4cf9af",
+                        "on-primary-fixed-variant": "#005762",
+                        "on-surface": "#f6f6f7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary/30">
+<!-- SideNavBar (Execution from JSON) -->
+<nav class="h-full w-72 fixed left-0 top-0 flex flex-col bg-[#111415] shadow-[24px_0_48px_-12px_rgba(0,227,253,0.05)] py-8 gap-2 z-50">
+<div class="px-8 mb-10">
+<h1 class="font-headline text-xl font-bold tracking-widest text-[#81ecff]">VLSI_LAB_CORE</h1>
+<p class="font-headline tracking-tighter uppercase text-[10px] text-on-surface-variant mt-1">Precision Terminal</p>
+</div>
+<div class="flex-1 space-y-1">
+<a class="flex items-center gap-4 px-6 py-4 text-[#f6f6f7]/60 hover:text-[#f6f6f7] transition-all hover:bg-[#1d2021] group" href="../member_dashboard_updated_nav/code.html">
+<span class="material-symbols-outlined text-lg" data-icon="dashboard">dashboard</span>
+<span class="font-headline tracking-tighter uppercase text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#f6f6f7]/60 hover:text-[#f6f6f7] transition-all hover:bg-[#1d2021] group" href="../systems_in_use/code.html">
+<span class="material-symbols-outlined text-lg" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="font-headline tracking-tighter uppercase text-sm">Equipment</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#f6f6f7]/60 hover:text-[#f6f6f7] transition-all hover:bg-[#1d2021] group" href="../member_booking_schedule_updated_nav/code.html">
+<span class="material-symbols-outlined text-lg" data-icon="calendar_today">calendar_today</span>
+<span class="font-headline tracking-tighter uppercase text-sm">Bookings</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#4cf9af] bg-[#171a1b] relative before:absolute before:left-0 before:h-2/3 before:w-1 before:bg-[#4cf9af] before:rounded-r-sm font-headline tracking-tighter uppercase text-sm" href="../systems_in_use/code.html">
+<span class="material-symbols-outlined text-lg" data-icon="developer_board">developer_board</span>
+<span>Systems In Use</span>
+</a>
+</div>
+<div class="mt-auto space-y-1 border-t border-outline-variant/10 pt-4">
+<a class="flex items-center gap-4 px-6 py-4 text-[#f6f6f7]/60 hover:text-[#f6f6f7] transition-all hover:bg-[#1d2021]" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="settings">settings</span>
+<span class="font-headline tracking-tighter uppercase text-sm">Settings</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-[#f6f6f7]/60 hover:text-[#f6f6f7] transition-all hover:bg-[#1d2021]" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="help_outline">help_outline</span>
+<span class="font-headline tracking-tighter uppercase text-sm">Support</span>
+</a>
+<div class="px-6 py-4 flex items-center gap-3 mt-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden border border-outline-variant/20">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a professional engineer in a tech lab environment, clean lighting, high resolution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkJWXmuMx-IfCm4gOusKtyc6UHAGGyJfjPpRhV_L0BtZ1UxSMdFCQnW_THv7sTMG1cXTcq3EdabfdAZ9EZVi-l6q5LYUHuwVTUe8iP5TFxKY_j7k4iR5q9UOCR_1dRByx089Ncg5C3GOBO2u2SRVWUYrnqTaURdGPf51qBmV1Buw769zyLvWgF3-oMJTX32ZXHDOrNgwACLhNIXe_ovY3XzlDCH85sRSAwtN6fae4xJBA6DG3ITSudqG6AhV39QJOfD7-Syb-u9ws"/>
+</div>
+<div class="flex flex-col">
+<span class="text-[11px] font-headline uppercase tracking-widest text-on-surface">Member Profile</span>
+<span class="text-[9px] text-primary uppercase">Active Session</span>
+</div>
+</div>
+</div>
+</nav>
+<!-- TopNavBar (Execution from JSON) -->
+<header class="fixed top-0 right-0 w-[calc(100%-18rem)] z-40 bg-[#0c0e0f]/80 backdrop-blur-xl flex justify-between items-center h-16 px-8 ml-72">
+<div class="flex items-center gap-6">
+<span class="text-lg font-bold text-[#81ecff] tracking-widest font-headline">VLSI_LAB_CORE</span>
+<div class="h-4 w-px bg-outline-variant/30"></div>
+<nav class="flex gap-6">
+<span class="text-[#4cf9af] font-bold font-headline text-xs uppercase tracking-widest">Live Monitoring</span>
+<span class="text-[#f6f6f7]/80 hover:text-[#81ecff] transition-colors cursor-pointer font-headline text-xs uppercase tracking-widest">History</span>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<input class="bg-surface-container-high border-none text-xs font-headline tracking-wider text-on-surface px-4 py-2 w-64 focus:ring-1 focus:ring-primary/50 transition-all rounded" placeholder="QUERY_SYSTEMS..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm" data-icon="search">search</span>
+</div>
+<div class="flex gap-4 items-center">
+<button class="relative text-[#81ecff] hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-1.5 h-1.5 bg-secondary rounded-full"></span>
+</button>
+<button class="text-[#81ecff] hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-72 pt-24 px-8 pb-12 min-h-screen grid grid-cols-12 gap-8">
+<!-- Header Section (Asymmetric) -->
+<section class="col-span-12 mb-4 flex justify-between items-end">
+<div class="max-w-2xl">
+<h2 class="font-headline text-4xl font-bold tracking-tight text-on-background mb-2">Systems In Use</h2>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed max-w-xl">
+                    Real-time telemetry from active fabrication and diagnostic hardware. Monitoring throughput, thermal cycles, and operator assignment across VLSI Sector 7.
+                </p>
+</div>
+<div class="flex items-center gap-3">
+<div class="px-4 py-2 bg-surface-container rounded-lg border border-outline-variant/10 flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-headline text-[10px] uppercase tracking-widest text-on-surface-variant">Live Feed: Nominal</span>
+</div>
+</div>
+</section>
+<!-- Grid of Cards (Bento-style distribution) -->
+<div class="col-span-12 lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Card 1: Operational -->
+<div class="bg-surface-container p-6 rounded-lg relative overflow-hidden group hover:bg-surface-bright transition-all duration-300">
+<div class="absolute top-0 right-0 p-4">
+<span class="px-2 py-1 bg-secondary-container/20 text-secondary font-headline text-[9px] font-bold uppercase tracking-widest rounded border border-secondary/20">Operational</span>
+</div>
+<div class="flex flex-col h-full">
+<div class="mb-6">
+<span class="text-[10px] font-headline text-primary uppercase tracking-widest mb-1 block">Imaging &amp; Analysis</span>
+<h3 class="text-xl font-headline font-bold text-on-surface group-hover:text-primary transition-colors">SEM Calibration Suite B</h3>
+</div>
+<div class="mt-auto space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-[10px] font-headline uppercase text-on-surface-variant mb-1">Assigned Operator</p>
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px]" data-icon="person">person</span>
+</div>
+<span class="text-xs font-body font-medium">Dr. Aris Thorne</span>
+</div>
+</div>
+<div>
+<p class="text-[10px] font-headline uppercase text-on-surface-variant mb-1">Duty Cycle</p>
+<span class="text-xs font-headline font-bold">84.2% Load</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[84%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: In Transition -->
+<div class="bg-surface-container p-6 rounded-lg relative overflow-hidden group hover:bg-surface-bright transition-all duration-300">
+<div class="absolute top-0 right-0 p-4">
+<span class="px-2 py-1 bg-tertiary-container/20 text-tertiary font-headline text-[9px] font-bold uppercase tracking-widest rounded border border-tertiary/20">In Transition</span>
+</div>
+<div class="flex flex-col h-full">
+<div class="mb-6">
+<span class="text-[10px] font-headline text-primary uppercase tracking-widest mb-1 block">Precision Machining</span>
+<h3 class="text-xl font-headline font-bold text-on-surface group-hover:text-primary transition-colors">Laser Cutter #04</h3>
+</div>
+<div class="mt-auto space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-[10px] font-headline uppercase text-on-surface-variant mb-1">Assigned Operator</p>
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-tertiary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px]" data-icon="person">person</span>
+</div>
+<span class="text-xs font-body font-medium">Marcus Vane</span>
+</div>
+</div>
+<div>
+<p class="text-[10px] font-headline uppercase text-on-surface-variant mb-1">Est. Completion</p>
+<span class="text-xs font-headline font-bold">14:20 PM (12m)</span>
+</div>
+</div>
+<div class="flex justify-between items-center text-[10px] font-headline uppercase tracking-tighter text-on-surface-variant">
+<span>Purge Cycle Active</span>
+<span>Step 4/6</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Idle -->
+<div class="bg-surface-container p-6 rounded-lg relative overflow-hidden group hover:bg-surface-bright transition-all duration-300">
+<div class="absolute top-0 right-0 p-4">
+<span class="px-2 py-1 bg-surface-variant text-on-surface-variant font-headline text-[9px] font-bold uppercase tracking-widest rounded border border-outline-variant/20">Idle</span>
+</div>
+<div class="flex flex-col h-full">
+<div class="mb-6">
+<span class="text-[10px] font-headline text-primary uppercase tracking-widest mb-1 block">Thin Film Deposition</span>
+<h3 class="text-xl font-headline font-bold text-on-surface group-hover:text-primary transition-colors">Sputtering System ALPHA</h3>
+</div>
+<div class="mt-auto">
+<p class="text-[10px] font-headline uppercase text-on-surface-variant mb-1">Last Operator</p>
+<div class="flex justify-between items-center">
+<span class="text-xs font-body">Sarah Jenkins</span>
+<button class="px-3 py-1 bg-primary text-on-primary font-headline text-[9px] uppercase font-bold tracking-widest hover:bg-primary-fixed-dim transition-colors">Initialize</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4: Operational (High Priority) -->
+<div class="bg-surface-container p-6 rounded-lg relative overflow-hidden group hover:bg-surface-bright transition-all duration-300 border-l-2 border-secondary">
+<div class="absolute top-0 right-0 p-4">
+<span class="px-2 py-1 bg-secondary-container/20 text-secondary font-headline text-[9px] font-bold uppercase tracking-widest rounded border border-secondary/20">Operational</span>
+</div>
+<div class="flex flex-col h-full">
+<div class="mb-6">
+<span class="text-[10px] font-headline text-primary uppercase tracking-widest mb-1 block">Lithography</span>
+<h3 class="text-xl font-headline font-bold text-on-surface group-hover:text-primary transition-colors">Deep UV Stepper 02</h3>
+</div>
+<div class="mt-auto space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-[10px] font-headline uppercase text-on-surface-variant mb-1">Assigned Operator</p>
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[12px]" data-icon="person">person</span>
+</div>
+<span class="text-xs font-body font-medium">Automatic Mode</span>
+</div>
+</div>
+<div>
+<p class="text-[10px] font-headline uppercase text-on-surface-variant mb-1">Uptime</p>
+<span class="text-xs font-headline font-bold">142h 11m</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<div class="h-1.5 w-full bg-secondary/10 flex gap-0.5">
+<div class="h-full w-1/4 bg-secondary"></div>
+<div class="h-full w-1/4 bg-secondary"></div>
+<div class="h-full w-1/4 bg-secondary"></div>
+<div class="h-full w-1/12 bg-secondary/30"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar (Stats & Hot Spots) -->
+<aside class="col-span-12 lg:col-span-4 space-y-6">
+<!-- Lab Occupancy -->
+<div class="bg-surface-container-low p-6 rounded-lg">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline text-sm font-bold uppercase tracking-widest text-on-surface">Lab Occupancy</h3>
+<span class="material-symbols-outlined text-primary text-xl" data-icon="groups">groups</span>
+</div>
+<div class="flex items-center justify-center mb-8">
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-surface-container-high" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-secondary transition-all duration-1000" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-dasharray="364.4" stroke-dashoffset="100" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-3xl font-headline font-bold text-on-surface">72%</span>
+<span class="text-[9px] font-headline uppercase text-on-surface-variant tracking-widest">Capacity</span>
+</div>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Active Researchers</span>
+<span class="font-headline font-bold">18 / 25</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Clean Room A</span>
+<span class="font-headline font-bold text-secondary">Optimal</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Biolab Annex</span>
+<span class="font-headline font-bold text-error">At Limit</span>
+</div>
+</div>
+</div>
+<!-- Lab 'Hot Spots' -->
+<div class="bg-surface-container-low p-6 rounded-lg">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline text-sm font-bold uppercase tracking-widest text-on-surface">Thermal Hot Spots</h3>
+<span class="material-symbols-outlined text-error text-xl" data-icon="heat_pump">heat_pump</span>
+</div>
+<div class="space-y-4">
+<div class="relative h-40 bg-surface-container rounded overflow-hidden">
+<img class="w-full h-full object-cover opacity-60" data-alt="Technical heat map visualization of a laboratory floor plan showing colored intensity zones in neon blue and hot red" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX2NhCH0e3vAzxncvS3JDFLXN57J8sX1zT6UA0oidw4edP5QwAr6VfLxeVMTvKoGsHDHvJ1JSMBEB7apHBoZ5nUtpGXuxuaiooOLZSvAp1XZxZEEQP9lFxVaRRbQA2jiv8VuJRXpSk59j-CApboKjHGqAEyY3HN5FJuwuQKv4J2cm9ekksxVUrPN89X0C4K_8DZf-gho8PHoVQyq9iMWW8kbzqycfVSkFQmhpboDLWp07-Dh_TSGWaWvpm_C0XiEc_D2lhDkcHoB0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 flex gap-2">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="text-[9px] font-headline uppercase tracking-widest text-on-surface bg-background/80 px-2 py-1 backdrop-blur-md rounded">Zone 04 Critical</span>
+</div>
+</div>
+<ul class="space-y-3">
+<li class="flex items-center gap-3">
+<div class="w-1.5 h-1.5 rounded-full bg-error"></div>
+<div class="flex-1">
+<p class="text-xs font-headline font-bold text-on-surface">Furnace Cluster C</p>
+<p class="text-[10px] text-on-surface-variant">Peak thermal discharge detected</p>
+</div>
+</li>
+<li class="flex items-center gap-3">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+<div class="flex-1">
+<p class="text-xs font-headline font-bold text-on-surface">Cryo Tank Main</p>
+<p class="text-[10px] text-on-surface-variant">Stable: -196.4°C</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Quick Action -->
+<div class="p-6 rounded-lg bg-primary/10 border border-primary/20 group hover:bg-primary/20 transition-all cursor-pointer">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-headline text-sm font-bold text-primary uppercase tracking-widest">Maintenance Request</h4>
+<p class="text-[10px] text-on-surface-variant mt-1">Submit system discrepancy report</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</div>
+</div>
+</aside>
+</main>
+<!-- FAB Suppression Rule Active: Not rendered on Systems In Use -->
+</body></html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#9cf0ff",
+                    "surface-container": "#1f1f1f",
+                    "on-tertiary-container": "#006a77",
+                    "surface-container-high": "#2a2a2a",
+                    "secondary-fixed": "#ffd9e1",
+                    "primary-fixed": "#81fb9b",
+                    "on-primary-fixed-variant": "#005322",
+                    "secondary-fixed-dim": "#ffb1c5",
+                    "tertiary-fixed-dim": "#00daf3",
+                    "on-secondary-fixed": "#3f001b",
+                    "surface": "#131313",
+                    "on-primary-fixed": "#00210a",
+                    "inverse-primary": "#006d30",
+                    "on-secondary-fixed-variant": "#8f0046",
+                    "outline": "#879486",
+                    "tertiary-container": "#77ebff",
+                    "primary-fixed-dim": "#64de82",
+                    "primary": "#e5ffe3",
+                    "on-error": "#690005",
+                    "tertiary": "#e8fbff",
+                    "on-tertiary": "#00363d",
+                    "surface-dim": "#131313",
+                    "on-secondary": "#650030",
+                    "secondary-container": "#ff4a8f",
+                    "secondary": "#ffb1c5",
+                    "surface-variant": "#353535",
+                    "on-secondary-container": "#590029",
+                    "on-primary": "#003916",
+                    "error-container": "#93000a",
+                    "background": "#131313",
+                    "on-background": "#e2e2e2",
+                    "inverse-surface": "#e2e2e2",
+                    "on-tertiary-fixed-variant": "#004f58",
+                    "inverse-on-surface": "#303030",
+                    "primary-container": "#7af495",
+                    "on-surface-variant": "#bdcaba",
+                    "surface-tint": "#64de82",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#001f24",
+                    "on-primary-container": "#006f31",
+                    "outline-variant": "#3e4a3e",
+                    "surface-container-highest": "#353535",
+                    "surface-bright": "#393939",
+                    "on-surface": "#e2e2e2",
+                    "surface-container-low": "#1b1b1b",
+                    "surface-container-lowest": "#0e0e0e",
+                    "error": "#ffb4ab"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .dot-grid {
+            background-image: radial-gradient(circle, #3e4a3e 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+        .glass-card {
+            background: rgba(31, 31, 31, 0.6);
+            backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="dot-grid absolute inset-0"></div>
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary-container/10 blur-[120px]"></div>
+<div class="absolute bottom-[-5%] right-[-5%] w-[30%] h-[30%] rounded-full bg-tertiary-container/10 blur-[100px]"></div>
+</div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/70 backdrop-blur-xl shadow-[0_0_40px_rgba(232,251,255,0.1)] flex justify-between items-center px-12 py-4 max-w-full">
+<div class="text-2xl font-bold tracking-tighter text-cyan-300 font-headline">LabConnector</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-400 hover:text-cyan-200 transition-colors font-headline tracking-tight" href="../home_labconnector/code.html">Home</a>
+<a class="text-slate-400 hover:text-cyan-200 transition-colors font-headline tracking-tight" href="../mission_motto/code.html">About Us</a>
+<a class="text-cyan-300 font-bold border-b-2 border-cyan-400 pb-1 font-headline tracking-tight" href="../explore_resources/code.html">Researches</a>
+<a class="text-slate-400 hover:text-cyan-200 transition-colors font-headline tracking-tight" href="../contact_us/code.html">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-slate-400 hover:text-cyan-300 transition-colors">search</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-bold tracking-tight rounded-lg hover:shadow-[0_0_15px_rgba(122,244,149,0.3)] transition-all active:scale-95">Connect</button>
+</div>
+</nav>
+<main class="relative z-10 pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<header class="mb-20 max-w-3xl">
+<div class="flex items-center gap-3 mb-4">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#ffb1c5] animate-pulse"></span>
+<span class="text-secondary font-label uppercase tracking-widest text-[10px] font-bold">Knowledge Ecosystem</span>
+</div>
+<h1 class="font-headline text-6xl md:text-7xl font-bold tracking-tighter text-on-background mb-6 leading-none">Resource <span class="text-tertiary-fixed-dim">Hub</span></h1>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-xl">
+                Access a decentralized repository of scientific intelligence. From peer-reviewed breakthroughs to AI-driven discovery paths.
+            </p>
+</header>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+<!-- Blog Card (Large) -->
+<div class="md:col-span-7 group relative flex flex-col justify-between p-8 rounded-xl bg-surface-container-low border border-outline-variant/15 glass-card overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+<div class="absolute top-0 right-0 p-8 opacity-20 group-hover:opacity-40 transition-opacity">
+<span class="material-symbols-outlined text-8xl text-primary-container" style="font-variation-settings: 'FILL' 1;">article</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-12">
+<span class="px-2 py-1 bg-primary-container/10 text-primary-container text-[10px] font-bold uppercase tracking-widest border border-primary-container/20">Archive v.04</span>
+</div>
+<h2 class="font-headline text-4xl font-bold tracking-tight text-primary mb-4">Research Blog</h2>
+<p class="text-on-surface-variant text-sm max-w-md mb-8 leading-relaxed">
+                        Deep dives into quantum computing, biotechnology, and autonomous systems. Curated articles from the global research community.
+                    </p>
+</div>
+<div class="relative z-10 flex flex-col gap-4">
+<div class="flex items-center gap-4 p-4 rounded-lg bg-surface-container-high/40 border border-white/5 group-hover:border-primary-container/20 transition-colors">
+<img class="w-12 h-12 rounded object-cover" data-alt="microscopic view of neural networks glowing with blue and green bioluminescence in a dark digital space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFfI5-tuXh3iVif40OGtMLMMoMvRAQz3f_ShtfVsh_jS9S5uTqf_E78nxc5sMQI2DeFGj37XLvUfOvJ7_hS2vszgNyiHrzusgGgrefTVN719guXieB_Kk9r3cgNdLmrDwbrEYfPObVdFQE6xs3Ej25ULK49TROV026qIfz7u8OH56i_Ty67kloQP0feADxpaNPlGz71mbObQOqodW024qxer0QLVdeuj1nxWLBIOT5Zlgjlxp8Zui00Y3M0xqLrjpiYieblG_jkTQJ"/>
+<div>
+<p class="text-xs font-bold text-primary-container">LATEST UPDATE</p>
+<p class="text-sm font-medium">Neural Synapse Mapping in VR</p>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-label text-sm font-bold tracking-widest uppercase mt-4 hover:gap-4 transition-all" href="#">
+                        Explore Articles <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Demo Library (Side Panel) -->
+<div class="md:col-span-5 group relative flex flex-col p-8 rounded-xl bg-surface-container-low border border-outline-variant/15 glass-card overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+<div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity">
+<img class="w-full h-full object-cover grayscale" data-alt="abstract mathematical grid pattern with geometric shapes and lines on a deep black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACQVQAN7AVd_NIwkSK1j3GAE9sFkeph-ZBEKm7wXs5n5Dr-Fyy8g-FSplxEhWC3kC4iTtbfD6l-TMq63ndiFhvrrVWzTO5xLcmVYUIYMY4gujfFaFjTwE-nF4ll2Mlceo5UggMCIktVqUwrU6dmiCOnbHVzahSshwE6Usv-r4rLy9MBkn8vq9L000HmnDNCmAqB96yjZ1H1AbDJSD-rcQ4wyjZnqbsOBkRFlNWEefi2rPwvasCsjA8FNHy5-p-IxP7QU1D54RirTzd"/>
+</div>
+<div class="relative z-10 flex flex-col h-full">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl mb-6" style="font-variation-settings: 'FILL' 1;">science</span>
+<h2 class="font-headline text-3xl font-bold tracking-tight text-tertiary mb-4">Demo Library</h2>
+<p class="text-on-surface-variant text-sm mb-12 leading-relaxed">
+                        Execute real-time laboratory simulations. Interactive visualizers for complex data structures and chemical reactions.
+                    </p>
+<div class="mt-auto space-y-3">
+<div class="h-1 w-full bg-outline-variant/20 rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-fixed-dim w-3/4 shadow-[0_0_10px_#00daf3]"></div>
+</div>
+<div class="flex justify-between text-[10px] font-bold text-tertiary-fixed-dim uppercase tracking-tighter">
+<span>SIMULATION CAPACITY</span>
+<span>75% LOAD</span>
+</div>
+</div>
+<button class="mt-8 w-full py-4 bg-tertiary/5 border border-tertiary/20 text-tertiary font-bold uppercase tracking-widest text-xs hover:bg-tertiary-container hover:text-on-tertiary-container transition-all">
+                        Launch Sandbox
+                    </button>
+</div>
+</div>
+<!-- Learning with AI (Wide Bottom) -->
+<div class="md:col-span-12 group relative flex flex-col md:flex-row items-center gap-12 p-10 rounded-xl bg-surface-container-low border border-outline-variant/15 glass-card overflow-hidden transition-all duration-500 hover:shadow-[0_20px_60px_rgba(255,74,143,0.15)]">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-secondary-container/5 to-transparent"></div>
+<div class="relative z-10 flex-1">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<span class="text-secondary font-label font-bold uppercase tracking-[0.2em] text-xs">Proprietary Model L-01</span>
+</div>
+<h2 class="font-headline text-5xl font-bold tracking-tighter text-secondary-fixed-dim mb-4">Learning with AI</h2>
+<p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed mb-8">
+                        The ultimate research co-pilot. Feed complex papers into our neural engine for instant summaries, hypothesis generation, and step-by-step methodology breakdowns.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<span class="px-4 py-2 rounded bg-surface-container-highest text-xs font-medium border border-white/5">Text-to-Hypothesis</span>
+<span class="px-4 py-2 rounded bg-surface-container-highest text-xs font-medium border border-white/5">Auto-Citation</span>
+<span class="px-4 py-2 rounded bg-surface-container-highest text-xs font-medium border border-white/5">Data Synthesis</span>
+</div>
+</div>
+<div class="relative z-10 w-full md:w-80 h-80 rounded-xl overflow-hidden border border-secondary/20 shadow-2xl transition-transform group-hover:scale-105 duration-700">
+<img class="w-full h-full object-cover" data-alt="a futuristic human silhouette made of glowing particles and connections standing in a dark void with neon pink accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVG0ooW_wC7X_AklYIc7p6KcAE3bZ-85KKAf8HFQJVzlKZ3OfYSAR0vOeOrMjufP4dyXj1gNBmFdNISZICQaj3Yex1voBN1gv1CAVmEdw0xQ37V8Dm7W0DFlzvqasvkLgO9eCrukeIzsrnF-P2O1UaIMBCdQXp1oqJ1Iqdpp1ZjsBDF16dQtIm4VW96HayRvxzsjCdyNJ4aiISvrtOXenc6YaTB6_sTda9lQWDkvCmNjLQpY4pMXOFoqi3Zqgn420MwkQdlO5NL7Di"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+<div class="absolute bottom-4 left-4 right-4 p-4 glass-card border border-white/10 rounded">
+<div class="flex gap-1 mb-1">
+<div class="w-1 h-3 bg-secondary animate-pulse"></div>
+<div class="w-1 h-5 bg-secondary/60 animate-pulse" style="animation-delay: 0.2s"></div>
+<div class="w-1 h-2 bg-secondary animate-pulse" style="animation-delay: 0.4s"></div>
+</div>
+<p class="text-[10px] font-bold text-secondary uppercase tracking-widest">AI Engine Active</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Metric Section -->
+<section class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-t border-outline-variant/10">
+<div>
+<p class="text-on-surface-variant font-label text-[10px] uppercase tracking-[0.3em] mb-2">Total Papers</p>
+<p class="font-headline text-4xl font-bold">14,208</p>
+</div>
+<div>
+<p class="text-on-surface-variant font-label text-[10px] uppercase tracking-[0.3em] mb-2">Simulations</p>
+<p class="font-headline text-4xl font-bold text-tertiary-fixed-dim">842</p>
+</div>
+<div>
+<p class="text-on-surface-variant font-label text-[10px] uppercase tracking-[0.3em] mb-2">AI Interactions</p>
+<p class="font-headline text-4xl font-bold text-secondary">2.4M</p>
+</div>
+<div>
+<p class="text-on-surface-variant font-label text-[10px] uppercase tracking-[0.3em] mb-2">Global Nodes</p>
+<p class="font-headline text-4xl font-bold">112</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#131313] w-full border-t border-white/10 flex flex-col md:flex-row justify-between items-center px-12 py-8 relative z-10">
+<div class="mb-6 md:mb-0">
+<div class="text-lg font-black text-purple-500 font-headline">LabConnector</div>
+<p class="font-['Inter'] uppercase tracking-widest text-[10px] text-slate-500 mt-2">© 2024 LabConnector. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] uppercase tracking-widest text-[10px] text-slate-500 hover:text-white transition-all opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-['Inter'] uppercase tracking-widest text-[10px] text-slate-500 hover:text-white transition-all opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-['Inter'] uppercase tracking-widest text-[10px] text-slate-500 hover:text-white transition-all opacity-80 hover:opacity-100" href="#">Researcher Portal</a>
+</div>
+<div class="mt-6 md:mt-0 flex gap-4">
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-purple-400">share</span>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-purple-400">monitoring</span>
+</div>
+</footer>
+</body></html>

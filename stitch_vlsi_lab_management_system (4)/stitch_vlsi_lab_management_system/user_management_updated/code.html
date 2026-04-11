@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Silicon Lattice Labs | VLSI_LAB_CORE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space_Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#232628",
+                    "on-primary-container": "#004d57",
+                    "tertiary": "#a68cff",
+                    "primary": "#81ecff",
+                    "secondary-fixed": "#4cf9af",
+                    "surface": "#0c0e0f",
+                    "error-dim": "#d7383b",
+                    "background": "#0c0e0f",
+                    "tertiary-container": "#7c4dff",
+                    "secondary-container": "#006c47",
+                    "on-secondary": "#005a3a",
+                    "surface-container": "#171a1b",
+                    "on-primary-fixed": "#003840",
+                    "outline-variant": "#464849",
+                    "surface-bright": "#292d2e",
+                    "on-primary-fixed-variant": "#005762",
+                    "on-error-container": "#ffa8a3",
+                    "surface-container-lowest": "#000000",
+                    "on-tertiary-fixed": "#1c0055",
+                    "on-surface-variant": "#aaabac",
+                    "on-tertiary": "#25006b",
+                    "surface-dim": "#0c0e0f",
+                    "primary-fixed": "#00e3fd",
+                    "on-tertiary-container": "#ffffff",
+                    "on-surface": "#f6f6f7",
+                    "surface-container-high": "#1d2021",
+                    "secondary-dim": "#36eaa1",
+                    "on-secondary-container": "#e1ffea",
+                    "on-primary": "#005762",
+                    "tertiary-fixed": "#b8a3ff",
+                    "on-tertiary-fixed-variant": "#4000ad",
+                    "surface-variant": "#232628",
+                    "surface-container-low": "#111415",
+                    "inverse-surface": "#f9f9fa",
+                    "inverse-primary": "#006976",
+                    "on-secondary-fixed-variant": "#006541",
+                    "inverse-on-surface": "#545556",
+                    "primary-dim": "#00d4ec",
+                    "tertiary-dim": "#7e51ff",
+                    "error": "#ff716c",
+                    "secondary-fixed-dim": "#36eaa1",
+                    "tertiary-fixed-dim": "#ab93ff",
+                    "secondary": "#4cf9af",
+                    "outline": "#747577",
+                    "on-error": "#490006",
+                    "error-container": "#9f0519",
+                    "on-secondary-fixed": "#00452c",
+                    "primary-container": "#00e3fd",
+                    "on-background": "#f6f6f7",
+                    "primary-fixed-dim": "#00d4ec",
+                    "surface-tint": "#81ecff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0c0e0f;
+            color: #f6f6f7;
+            font-family: 'Manrope', sans-serif;
+        }
+        .technical-grid {
+            background-image: radial-gradient(circle, #464849 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="min-h-screen overflow-x-hidden">
+<!-- SideNavBar Shell -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#111415] flex flex-col border-r border-[#464849]/15 z-50">
+<a class="px-6 py-8" href="../equipment_management_updated/code.html">
+<h1 class="font-['Space_Grotesk'] font-black text-[#81ecff] text-xl tracking-tighter">Lab_Control_v2</h1>
+<p class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-[#f6f6f7]/40 mt-1">Active_Node: 0x4F2</p>
+<nav class="flex-1 flex flex-col mt-4">
+<!-- Equipment -->
+<a class="flex items-center gap-4 px-6 py-4 hover:bg-[#1d2021] hover:text-[#4cf9af] transition-all duration-300 cursor-pointer text-[#f6f6f7]/40 font-['Manrope'] text-sm uppercase tracking-widest" href="../equipment_management_updated/code.html">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+<span>Equipment</span>
+</a>
+<!-- User Access (Active Tab) -->
+<a class="flex items-center gap-4 px-6 py-4 bg-[#171a1b] text-[#81ecff] font-bold font-['Manrope'] text-sm uppercase tracking-widest cursor-pointer" href="../user_management_updated/code.html">
+<span class="material-symbols-outlined">shield_person</span>
+<span>User Access</span>
+</a>
+<!-- Booking Log -->
+<a class="flex items-center gap-4 px-6 py-4 hover:bg-[#1d2021] hover:text-[#4cf9af] transition-all duration-300 cursor-pointer text-[#f6f6f7]/40 font-['Manrope'] text-sm uppercase tracking-widest" href="../booking_scheduling_updated/code.html">
+<span class="material-symbols-outlined">calendar_month</span>
+<span>Booking Log</span>
+</a>
+<!-- Maintenance -->
+<a class="flex items-center gap-4 px-6 py-4 hover:bg-[#1d2021] hover:text-[#4cf9af] transition-all duration-300 cursor-pointer text-[#f6f6f7]/40 font-['Manrope'] text-sm uppercase tracking-widest" href="../maintenance_management/code.html">
+<span class="material-symbols-outlined">build</span>
+<span>Maintenance</span>
+</a></nav></a>
+<div class="px-6 mb-8">
+<button class="w-full py-3 bg-[#81ecff] text-[#005762] font-['Space_Grotesk'] font-bold text-xs uppercase tracking-widest rounded-lg flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+                New Entry
+            </button>
+</div>
+<footer class="border-t border-[#464849]/15 pt-4 pb-6">
+<div class="flex items-center gap-4 px-6 py-2 hover:bg-[#1d2021] hover:text-[#4cf9af] transition-all duration-300 cursor-pointer text-[#f6f6f7]/40 font-['Manrope'] text-sm uppercase tracking-widest">
+<span class="material-symbols-outlined">help</span>
+<span>Support</span>
+</div>
+<div class="flex items-center gap-4 px-6 py-2 hover:bg-[#1d2021] hover:text-[#4cf9af] transition-all duration-300 cursor-pointer text-[#f6f6f7]/40 font-['Manrope'] text-sm uppercase tracking-widest">
+<span class="material-symbols-outlined">terminal</span>
+<span>Logs</span>
+</div>
+</footer>
+</aside>
+<!-- TopAppBar Shell -->
+<header class="w-full top-0 sticky z-40 flex justify-between items-center px-6 py-4 bg-[#0c0e0f] pl-72">
+<div class="flex items-center gap-8">
+<div class="bg-surface-container-high px-4 py-2 rounded flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-['Space_Grotesk'] text-on-surface-variant w-64 placeholder:opacity-40" placeholder="QUERY_USER_DATABASE..." type="text"/>
+</div>
+<nav class="flex gap-6">
+<a class="text-[#f6f6f7]/60 font-['Space_Grotesk'] tracking-tight hover:text-[#81ecff] transition-colors duration-200 cursor-pointer">Inventory</a>
+<a class="text-[#81ecff] border-b-2 border-[#4cf9af] pb-1 font-['Space_Grotesk'] tracking-tight cursor-pointer font-bold">Permissions</a>
+<a class="text-[#f6f6f7]/60 font-['Space_Grotesk'] tracking-tight hover:text-[#81ecff] transition-colors duration-200 cursor-pointer">Scheduling</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#81ecff] cursor-pointer">notifications</span>
+<span class="material-symbols-outlined text-[#81ecff] cursor-pointer">settings</span>
+<div class="w-10 h-10 rounded-full border border-primary/20 p-0.5 overflow-hidden">
+<img alt="Administrator Profile" class="w-full h-full object-cover grayscale brightness-125" data-alt="portrait of a focused lab administrator in a technical dark environment with neon blue backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiMAUg_Zv1m4UyaPO7qdQveoWry7EFsC0SdT6rKhDaffGWg5OE7oadNCo2UK4V6s4SW0Li8e56bVPNpMqxTDK1Qq11vJ4GpUfZ0hOxLmCoHly5_qAj0U73SHSkbGi0BZhzzJqJJ6oGg5nUuszBKHT__MD_ICEUa6Ljc7O2wssYCiUdfrq48CjQLjOOzU86pEWg3xDA3NtUn4QUuG2JbbZJ5YsXAQLO6hOyYdyBkeZH66MdXSRVY0FnfSq8Q6Y6oQL3OcYAtF2qmI8"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pl-72 pr-8 pt-6 pb-20 technical-grid min-h-screen">
+<!-- Header Section -->
+<header class="mb-10">
+<h2 class="font-headline text-5xl font-extrabold tracking-tighter text-on-surface mb-2">ACCESS_OVERRIDE</h2>
+<p class="font-body text-on-surface-variant max-w-2xl">Management portal for laboratory clearance protocols, certification audits, and personnel access lifecycle.</p>
+</header>
+<div class="grid grid-cols-12 gap-6">
+<!-- User Directory Section (Level 2 Tonal Shift) -->
+<section class="col-span-12 xl:col-span-8 space-y-6">
+<div class="bg-surface-container p-6 rounded-lg">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline text-xl font-bold text-primary tracking-tight">ACTIVE_PERSONNEL</h3>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded font-label text-[10px] text-secondary border border-secondary/20">TOTAL: 142</span>
+<span class="px-3 py-1 bg-surface-container-high rounded font-label text-[10px] text-primary border border-primary/20">ONLINE: 12</span>
+</div>
+</div>
+<div class="space-y-4">
+<!-- User Card 1 -->
+<div class="bg-surface-container-low hover:bg-surface-bright transition-all duration-200 p-4 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center border border-outline-variant/15 overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" data-alt="professional male research engineer in industrial setting with clean blue lighting and technical overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAusDzAY2Mp0J8Pbr9hjcRytf7-O6DK1gHbKhrlqj7ZyI49iF4B7l6mtFCghbs1XV0tmRmraz3VvRhSURhaKb_laBxK3-YFTKA6iMtF1vAxHEfQBB3Ec19bJrD01VtWcLJH5eFqQ70sBtLHCZhyBEMh1jwD2VACVoHxoEiZRwOA92iesjoS2u_4CWVrV5NpClU2D8bn17tWgBzzaBtS6SWQjq76Xl_Z9e7uZv0bCKr_RqTVuSOxzHUsRefqZXcg1YJna0O5n-W8uI"/>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Dr. Elias Thorne</h4>
+<p class="font-body text-xs text-on-surface-variant">Senior Lithography Lead</p>
+</div>
+<div class="ml-6 px-3 py-1 bg-secondary-container/20 rounded-full border border-secondary/20">
+<span class="font-label text-[10px] uppercase text-secondary font-bold">Admin</span>
+</div>
+</div>
+<div class="flex items-center gap-12">
+<div class="flex flex-col gap-1">
+<span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">Clearance</span>
+<div class="flex gap-1">
+<button class="w-7 h-7 flex items-center justify-center text-[10px] font-bold rounded bg-surface-container-highest text-on-surface-variant border border-outline-variant/20 hover:border-primary/50">L1</button>
+<button class="w-7 h-7 flex items-center justify-center text-[10px] font-bold rounded bg-surface-container-highest text-on-surface-variant border border-outline-variant/20 hover:border-primary/50">L2</button>
+<button class="w-7 h-7 flex items-center justify-center text-[10px] font-bold rounded bg-surface-container-highest text-on-surface-variant border border-outline-variant/20 hover:border-primary/50">L3</button>
+<button class="w-7 h-7 flex items-center justify-center text-[10px] font-bold rounded bg-surface-container-highest text-on-surface-variant border border-outline-variant/20 hover:border-primary/50">L4</button>
+<button class="w-7 h-7 flex items-center justify-center text-[10px] font-bold rounded bg-primary text-on-primary border border-primary">L5</button>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 max-w-[200px]">
+<div class="flex items-center gap-1.5 px-2 py-0.5 bg-secondary-container/10 border border-secondary/30 rounded">
+<span class="material-symbols-outlined text-[10px] text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[9px] font-label text-secondary uppercase">Safety</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 bg-secondary-container/10 border border-secondary/30 rounded">
+<span class="material-symbols-outlined text-[10px] text-secondary" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+<span class="text-[9px] font-label text-secondary uppercase">3D_PRINT</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- User Card 2 -->
+<div class="bg-surface-container-low hover:bg-surface-bright transition-all duration-200 p-4 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center border border-outline-variant/15 overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" data-alt="female engineer in technical apparel with soft cinematic studio lighting on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmIOjI-gkRfgW27V_A9-xHY7C4-WIv42uiq-Cz529_IRGlPwNnp0lJtq8HJYf_iINk_6t7YCEVatPLaDlpR6nu9_CDLb_LPcp1KrDc0Sk7ggjdOODwfAfILPOVA61R3xvGUBf4CFT2sR_I_ySH9kuxLABMkAplkmT2sgACOoOoO4iO8ByggurMJTrG-_u5Px26g4fWZm0DyPZZFzVqerFmYdUqfjo8VhGuJ_zKLNUlYmgAgHOhspkgGdtct-5THKcndOalVPxnqwE"/>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Sarah Vance</h4>
+<p class="font-body text-xs text-on-surface-variant">Circuitry Intern</p>
+</div>
+<div class="ml-6 px-3 py-1 bg-surface-container-highest rounded-full border border-outline-variant/30">
+<span class="font-label text-[10px] uppercase text-on-surface-variant font-bold">Trainee</span>
+</div>
+</div>
+<div class="flex items-center gap-12">
+<div class="flex flex-col gap-1">
+<span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">Clearance</span>
+<div class="flex gap-1">
+<button class="w-7 h-7 flex items-center justify-center text-[10px] font-bold rounded bg-primary text-on-primary border border-primary">L1</button>
+<button class="w-7 h-7 flex items-center justify-center text-[10px] font-bold rounded bg-surface-container-highest text-on-surface-variant border border-outline-variant/20 hover:border-primary/50">L2</button>
+<button class="w-7 h-7 flex items-center justify-center text-[10px] font-bold rounded bg-surface-container-highest text-on-surface-variant border border-outline-variant/20 hover:border-primary/50">L3</button>
+<button class="w-7 h-7 flex items-center justify-center text-[10px] font-bold rounded bg-surface-container-highest text-on-surface-variant border border-outline-variant/20 hover:border-primary/50">L4</button>
+<button class="w-7 h-7 flex items-center justify-center text-[10px] font-bold rounded bg-surface-container-highest text-on-surface-variant border border-outline-variant/20 hover:border-primary/50">L5</button>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 max-w-[200px]">
+<div class="flex items-center gap-1.5 px-2 py-0.5 bg-error-container/10 border border-error/30 rounded">
+<span class="material-symbols-outlined text-[10px] text-error">warning</span>
+<span class="text-[9px] font-label text-error uppercase">PENDING_SAFETY</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- User Card 3 -->
+<div class="bg-surface-container-low hover:bg-surface-bright transition-all duration-200 p-4 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center border border-outline-variant/15 overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" data-alt="middle aged technician with glasses in laboratory environment with bright technical background lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFUeFPBBl6b1WJHKHncRitTtCZTe_OQMGlfDknd_KyirQlHJNDxYxffWhHN5jNR7bFDS7X5fdyUTe2x6ZjybJ9rHdmxCHyejWAk8XVDrRFvf09NB-XDLkr-nvBIwSBefKr_No7kn73t_AauQRpPbwco_d04nSohi1Ks_h360QQB3dgkpc-EEpHfml3TQD0zyo0LBMFlb1d8OXJ4vJeFHMy31SPC6z3wABJNKZshjSL6MLLnxhxDNN7qOvOQB3kZmMP8iiVKt7Vp5U"/>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Markus Webber</h4>
+<p class="font-body text-xs text-on-surface-variant">Maintenance Contractor</p>
+</div>
+<div class="ml-6 px-3 py-1 bg-surface-container-highest rounded-full border border-outline-variant/30">
+<span class="font-label text-[10px] uppercase text-on-surface-variant font-bold">Guest</span>
+</div>
+</div>
+<div class="flex items-center gap-12">
+<div class="flex flex-col gap-1">
+<span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">Clearance</span>
+<div class="flex gap-1">
+<button class="w-7 h-7 flex items-center justify-center text-[10px] font-bold rounded bg-surface-container-highest text-on-surface-variant border border-outline-variant/20 hover:border-primary/50">L1</button>
+<button class="w-7 h-7 flex items-center justify-center text-[10px] font-bold rounded bg-primary text-on-primary border border-primary">L2</button>
+<button class="w-7 h-7 flex items-center justify-center text-[10px] font-bold rounded bg-surface-container-highest text-on-surface-variant border border-outline-variant/20 hover:border-primary/50">L3</button>
+<button class="w-7 h-7 flex items-center justify-center text-[10px] font-bold rounded bg-surface-container-highest text-on-surface-variant border border-outline-variant/20 hover:border-primary/50">L4</button>
+<button class="w-7 h-7 flex items-center justify-center text-[10px] font-bold rounded bg-surface-container-highest text-on-surface-variant border border-outline-variant/20 hover:border-primary/50">L5</button>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 max-w-[200px]">
+<div class="flex items-center gap-1.5 px-2 py-0.5 bg-secondary-container/10 border border-secondary/30 rounded">
+<span class="material-symbols-outlined text-[10px] text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[9px] font-label text-secondary uppercase">Safety</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-8 flex justify-center">
+<button class="text-primary font-label text-xs uppercase tracking-widest flex items-center gap-2 hover:underline">
+                            Load Full Directory <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Sidebar Panel: Requests & Invites -->
+<aside class="col-span-12 xl:col-span-4 space-y-6">
+<!-- Access Requests Bento -->
+<div class="bg-surface-container p-6 rounded-lg">
+<h3 class="font-headline text-lg font-bold text-on-surface mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">request_quote</span>
+                        PENDING_REQUESTS
+                    </h3>
+<div class="space-y-4">
+<div class="bg-surface-container-low border-l-4 border-secondary p-4 rounded">
+<div class="flex justify-between items-start mb-2">
+<p class="text-xs font-bold font-headline text-on-surface">Upgrade Clearance -&gt; L3</p>
+<span class="text-[9px] font-label text-on-surface-variant">2H AGO</span>
+</div>
+<p class="text-[11px] text-on-surface-variant mb-4 font-body leading-relaxed">User: **Julian Marx** requires L3 access for Bio-Hazard Cabinet operation in Zone 4.</p>
+<div class="flex gap-2">
+<button class="flex-1 py-1.5 bg-secondary-container text-secondary text-[10px] font-label uppercase font-black tracking-tighter hover:brightness-110">Approve</button>
+<button class="flex-1 py-1.5 bg-surface-container-highest text-on-surface-variant text-[10px] font-label uppercase font-black tracking-tighter hover:text-error">Deny</button>
+</div>
+</div>
+<div class="bg-surface-container-low border-l-4 border-primary p-4 rounded">
+<div class="flex justify-between items-start mb-2">
+<p class="text-xs font-bold font-headline text-on-surface">3D Print Certification Audit</p>
+<span class="text-[9px] font-label text-on-surface-variant">5H AGO</span>
+</div>
+<p class="text-[11px] text-on-surface-variant mb-4 font-body leading-relaxed">User: **Lana Croft** submitted documentation for Stratasys J55 Pro certification.</p>
+<div class="flex gap-2">
+<button class="flex-1 py-1.5 bg-primary text-on-primary text-[10px] font-label uppercase font-black tracking-tighter hover:brightness-110">Verify</button>
+<button class="flex-1 py-1.5 bg-surface-container-highest text-on-surface-variant text-[10px] font-label uppercase font-black tracking-tighter hover:text-error">Reject</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Invites Bento -->
+<div class="bg-surface-container-low p-6 rounded-lg relative overflow-hidden border border-outline-variant/10">
+<div class="absolute -right-4 -top-4 opacity-10">
+<span class="material-symbols-outlined text-[120px] text-primary">mail</span>
+</div>
+<h3 class="font-headline text-lg font-bold text-on-surface mb-2">ACTIVE_INVITES</h3>
+<p class="text-[10px] font-label uppercase tracking-[0.2em] text-primary mb-6">4 OUTSTANDING</p>
+<div class="space-y-3">
+<div class="flex items-center justify-between py-2 border-b border-outline-variant/10">
+<div>
+<p class="text-[11px] font-bold text-on-surface">k.mitnick@nexus.org</p>
+<p class="text-[9px] text-on-surface-variant">Invited as: Member</p>
+</div>
+<span class="material-symbols-outlined text-sm text-on-surface-variant cursor-pointer hover:text-error">cancel</span>
+</div>
+<div class="flex items-center justify-between py-2 border-b border-outline-variant/10">
+<div>
+<p class="text-[11px] font-bold text-on-surface">a.turing@b-park.gov</p>
+<p class="text-[9px] text-on-surface-variant">Invited as: Trainee</p>
+</div>
+<span class="material-symbols-outlined text-sm text-on-surface-variant cursor-pointer hover:text-error">cancel</span>
+</div>
+</div>
+<button class="w-full mt-6 py-3 border border-primary/30 text-primary text-[10px] font-label uppercase font-black tracking-widest hover:bg-primary/5 transition-all">
+                        SEND_NEW_INVITE
+                    </button>
+</div>
+<!-- Lab Security Status (Visual Tonal Anchor) -->
+<div class="bg-[#001f18] p-6 rounded-lg border border-secondary/20">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-3 h-3 bg-secondary rounded-full animate-pulse shadow-[0_0_10px_#4cf9af]"></div>
+<h4 class="font-headline font-bold text-secondary tracking-widest">SECURITY_NOMINAL</h4>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-[10px] font-label text-secondary/60">
+<span>GATEWAY_LOAD</span>
+<span>12%</span>
+</div>
+<div class="w-full bg-secondary-container/20 h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[12%]"></div>
+</div>
+<p class="text-[9px] text-secondary/40 font-body mt-2 uppercase">Integrity check completed 4.2ms ago. All nodes synchronized.</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- FAB Action (Contextual: User Access Screen) -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-on-primary rounded-xl shadow-[0_24px_48px_-12px_rgba(0,227,253,0.3)] flex items-center justify-center hover:scale-105 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined">person_add</span>
+</button>
+</body></html>
